@@ -1,8 +1,8 @@
 import userModel from "../models/userModel.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-
-const SECRET = "lpu123";
+//import dotenv from "dotenv"
+const SECRET = process.env.JWT_SECRET;
 
 const signup = async (req, res) => {
   try {
