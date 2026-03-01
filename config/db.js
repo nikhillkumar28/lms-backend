@@ -13,7 +13,8 @@ const dbConnect = async () => {
   try {
     console.log("⏳ Attempting to connect to MongoDB...");
     const db = await mongoose.connect(process.env.MONGO_URI, {
-      serverSelectionTimeoutMS: 5000, // Kill the wait after 5 seconds
+      serverSelectionTimeoutMS: 5000,
+      family: 4 // Kill the wait after 5 seconds
     });
     isConnected = db.connections[0].readyState;
     console.log("✅ MongoDB Connected Successfully");
