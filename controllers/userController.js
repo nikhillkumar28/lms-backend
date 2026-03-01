@@ -3,7 +3,6 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 //import dotenv from "dotenv"
 const SECRET = process.env.JWT_SECRET;
-
 const signup = async (req, res) => {
   try {
     // Destructure for safety
